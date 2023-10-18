@@ -5,34 +5,42 @@ import java.util.List;
 public class Player {
 
   private ArrayList<Card> hand;
-  private int score;
+  private int handValue;
+  private int aceCounter;
 
   public Player() {
     // Initialize an empty hand and score
     hand = new ArrayList<>();
-    score = 0;
+    handValue = 0;
+    aceCounter = 0;
   }
 
   public void addToHand(Card card) {
-    // Add a card to the player's hand
+    // Check if the card is an ACE
+    if (card.getValue() == 11) {
+      aceCounter++;
+    }
+
+    // Update handValue
+    handValue += card.getValue();
+    // Reduce Ace if needed
+    while (handValue > 21 && aceCounter > 0) {
+      handValue -= 10;
+      aceCounter--;
+    }
+    //Add card to hand
     hand.add(card);
   }
 
+  public int getAceCounter() {
+    return aceCounter;
+  }
+
   public int getHandValue() {
-    int handValue = 0;
-    int numAces = 0;
-    for (Card card : hand) {
-      handValue += card.getValue();
-      if (card.getValue() == 11) {
-        numAces++;
-      }
-    }
-
-    while (handValue > 21 && numAces > 0) {
-      handValue -= 10;
-      numAces--;
-    }
-
     return handValue;
+  }
+
+  public ArrayList<Card> getHand() {
+    return hand;
   }
 }

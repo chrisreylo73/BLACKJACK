@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class BlackJack {
 
-  private Player player;
+  Player player;
   Dealer dealer;
   Deck deck;
 
@@ -13,16 +13,11 @@ public class BlackJack {
     // Initialize the game components
     deck = new Deck();
     dealer = new Dealer();
+    player = new Player();
     start();
   }
 
-  public void initDeal() {
-    player.addToHand(deck.drawCard());
-    player.addToHand(deck.drawCard());
-  }
+  public void initDeal() {}
 
-  public void start() {
-    // Implement the main game loop
-
-  }
+  public void start() {}
 }

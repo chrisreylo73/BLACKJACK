@@ -55,6 +55,10 @@ public class Deck {
     System.out.println(deck);
   }
 
+  public ArrayList<Card> getDeck() {
+    return deck;
+  }
+
   public Card drawCard() {
     // Draw a card from the deck
     if (deck.size() > 1) {
