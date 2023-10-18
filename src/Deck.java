@@ -43,7 +43,6 @@ public class Deck {
 
   public void shuffle() {
     // Shuffle the deck
-
     for (int i = 0; i < deck.size(); i++) {
       int j = random.nextInt(deck.size());
       Card currentCard = deck.get(i);

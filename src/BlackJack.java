@@ -16,6 +16,11 @@ public class BlackJack {
     start();
   }
 
+  public void initDeal() {
+    player.addToHand(deck.drawCard());
+    player.addToHand(deck.drawCard());
+  }
+
   public void start() {
     // Implement the main game loop
 
