@@ -8,12 +8,14 @@ public class BlackJack {
   Player player;
   Dealer dealer;
   Deck deck;
+  Gui gui;
 
   public BlackJack() {
     // Initialize the game components
     deck = new Deck();
     dealer = new Dealer();
     player = new Player();
+    gui = new Gui();
     start();
   }
 
@@ -23,6 +25,8 @@ public class BlackJack {
     System.out.println(
       "PLAYER HAND: " + player.getHand() + "   VALUE: " + player.getHandValue()
     );
+    System.out.println("   ACE COUNTER: " + dealer.getAceCounter());
+
     Card hiddenCard = deck.getCardFromDeck();
     dealer.setHiddenCard(hiddenCard);
     dealer.addToHand(hiddenCard);
@@ -30,7 +34,17 @@ public class BlackJack {
     System.out.println(
       "DEALER HAND: " + dealer.getHand() + "   VALUE: " + dealer.getHandValue()
     );
+    System.out.println(
+      "   ACE COUNTER: " +
+      dealer.getAceCounter() +
+      "    HIDDEN CARD: " +
+      dealer.getHiddenCard()
+    );
   }
+
+  public void handleHit() {}
+
+  public void handleStay() {}
 
   public void start() {
     initDeal();
