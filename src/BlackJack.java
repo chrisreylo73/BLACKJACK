@@ -6,12 +6,13 @@ import javax.swing.*;
 public class BlackJack {
 
   private Player player;
-  private Dealer dealer;
+  Dealer dealer;
   Deck deck;
 
   public BlackJack() {
     // Initialize the game components
     deck = new Deck();
+    dealer = new Dealer();
     start();
   }
 
