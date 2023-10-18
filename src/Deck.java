@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Random;
 
 public class Deck {
@@ -55,10 +54,6 @@ public class Deck {
     System.out.println(deck);
   }
 
-  public ArrayList<Card> getDeck() {
-    return deck;
-  }
-
   public Card drawCard() {
     // Draw a card from the deck
     if (deck.size() > 1) {
@@ -66,6 +61,14 @@ public class Deck {
       shuffle();
     }
 
+    return deck.remove(deck.size() - 1);
+  }
+
+  public ArrayList<Card> getDeck() {
+    return deck;
+  }
+
+  public Card getCardFromDeck() {
     return deck.remove(deck.size() - 1);
   }
 }

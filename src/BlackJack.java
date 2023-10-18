@@ -17,7 +17,22 @@ public class BlackJack {
     start();
   }
 
-  public void initDeal() {}
+  public void initDeal() {
+    player.addToHand(deck.getCardFromDeck());
+    player.addToHand(deck.getCardFromDeck());
+    System.out.println(
+      "PLAYER HAND: " + player.getHand() + "   VALUE: " + player.getHandValue()
+    );
+    Card hiddenCard = deck.getCardFromDeck();
+    dealer.setHiddenCard(hiddenCard);
+    dealer.addToHand(hiddenCard);
+    dealer.addToHand(deck.getCardFromDeck());
+    System.out.println(
+      "DEALER HAND: " + dealer.getHand() + "   VALUE: " + dealer.getHandValue()
+    );
+  }
 
-  public void start() {}
+  public void start() {
+    initDeal();
+  }
 }
