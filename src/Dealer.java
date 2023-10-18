@@ -1,6 +1,9 @@
 public class Dealer extends Player {
 
-  public void play() {
-    // Implement dealer's logic for playing
+  public boolean shouldDrawCard() {
+    if (getHandValue() < 17) {
+      return true;
+    }
+    return false;
   }
 }
