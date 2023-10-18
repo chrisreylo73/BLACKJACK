@@ -1,14 +1,14 @@
 public class Card {
 
   String value;
-  String type;
+  String suit;
 
-  Card(String value, String type) {
+  Card(String value, String suit) {
     this.value = value;
-    this.type = type;
+    this.suit = suit;
   }
 
   public String toString() {
-    return value + "-" + type;
+    return value + "-" + suit;
   }
 }
