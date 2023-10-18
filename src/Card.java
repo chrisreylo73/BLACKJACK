@@ -7,4 +7,8 @@ public class Card {
     this.value = value;
     this.type = type;
   }
+
+  public String toString() {
+    return value + "-" + type;
+  }
 }
