@@ -42,10 +42,6 @@ public class BlackJack {
     );
   }
 
-  public ArrayList<Card> getDealerHand() {
-    return dealer.getHand();
-  }
-
   public void handleHit() {}
 
   public void handleStay() {}
@@ -54,7 +50,19 @@ public class BlackJack {
     initDeal();
   }
 
+  public Card getCardFromDeck() {
+    return deck.getCardFromDeck();
+  }
+
   public ArrayList<Card> getPlayersHand() {
     return player.getHand();
+  }
+
+  public void addCardToPlayerHand(Card card) {
+    player.addToHand(card);
+  }
+
+  public ArrayList<Card> getDealerHand() {
+    return dealer.getHand();
   }
 }

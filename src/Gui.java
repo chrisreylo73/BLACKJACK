@@ -5,8 +5,8 @@ import javax.swing.*;
 
 public class Gui {
 
-  private int boardWidth;
-  private int boardHeight;
+  private int boardWidth = 600;
+  private int boardHeight = 600;
   JFrame frame;
   JPanel gamePanel;
   JPanel buttonsPanel;
@@ -14,10 +14,10 @@ public class Gui {
   JButton stayButton;
   int cardWidth = 110;
   int cardHeight = 154;
+  BlackJack game;
 
   public Gui(BlackJack game) {
-    this.boardWidth = 600;
-    this.boardHeight = 600;
+    this.game = game;
     this.frame = new JFrame("Black Jack");
     frame.setVisible(true);
     frame.setSize(boardWidth, boardHeight);
@@ -32,6 +32,7 @@ public class Gui {
 
           try {
             //Draw Hidden Card
+
             Image hiddenCardImage = new ImageIcon(
               getClass().getResource("./cards/BACK.png")
             )
@@ -58,7 +59,7 @@ public class Gui {
               );
             }
 
-            //PlayersHand
+            //Players Hand
             ArrayList<Card> playersHand = game.getPlayersHand();
             for (int i = 0; i < playersHand.size(); i++) {
               Card card = playersHand.get(i);
@@ -91,5 +92,15 @@ public class Gui {
     buttonsPanel.add(hitButton);
     buttonsPanel.add(stayButton);
     frame.add(buttonsPanel, BorderLayout.SOUTH);
+
+    hitButton.addActionListener(
+      new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          Card card = game.getCardFromDeck();
+
+          gamePanel.repaint();
+        }
+      }
+    );
   }
 }
