@@ -15,7 +15,7 @@ public class Gui {
   int cardWidth = 110;
   int cardHeight = 154;
 
-  public Gui() {
+  public Gui(BlackJack game) {
     this.boardWidth = 600;
     this.boardHeight = 600;
     this.frame = new JFrame("Black Jack");
@@ -29,21 +29,52 @@ public class Gui {
         @Override
         public void paintComponent(Graphics g) {
           super.paintComponent(g);
-          //Draw Hidden Card
+
           try {
+            //Draw Hidden Card
             Image hiddenCardImage = new ImageIcon(
               getClass().getResource("./cards/BACK.png")
             )
               .getImage();
 
-            g.drawImage(
-              hiddenCardImage,
-              (boardWidth / 2) - cardWidth - 20,
-              50,
-              cardWidth,
-              cardHeight,
-              null
-            );
+            g.drawImage(hiddenCardImage, 20, 20, cardWidth, cardHeight, null);
+
+            //Dealer Hand
+            ArrayList<Card> dealersHand = game.getDealerHand();
+            for (int i = 0; i < dealersHand.size(); i++) {
+              Card card = dealersHand.get(i);
+              Image cardImg = new ImageIcon(
+                getClass().getResource(card.getImagePath())
+              )
+                .getImage();
+
+              g.drawImage(
+                cardImg,
+                cardWidth + 25 + (cardWidth + 5) * i,
+                20,
+                cardWidth,
+                cardHeight,
+                null
+              );
+            }
+
+            //PlayersHand
+            ArrayList<Card> playersHand = game.getPlayersHand();
+            for (int i = 0; i < playersHand.size(); i++) {
+              Card card = playersHand.get(i);
+              Image cardImg = new ImageIcon(
+                getClass().getResource(card.getImagePath())
+              )
+                .getImage();
+              g.drawImage(
+                cardImg,
+                20 + (cardWidth + 5) * i,
+                320,
+                cardWidth,
+                cardHeight,
+                null
+              );
+            }
           } catch (Exception e) {
             e.printStackTrace();
           }

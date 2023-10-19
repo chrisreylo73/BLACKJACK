@@ -15,7 +15,7 @@ public class BlackJack {
     deck = new Deck();
     dealer = new Dealer();
     player = new Player();
-    gui = new Gui();
+    gui = new Gui(this);
     start();
   }
 
@@ -42,11 +42,19 @@ public class BlackJack {
     );
   }
 
+  public ArrayList<Card> getDealerHand() {
+    return dealer.getHand();
+  }
+
   public void handleHit() {}
 
   public void handleStay() {}
 
   public void start() {
     initDeal();
+  }
+
+  public ArrayList<Card> getPlayersHand() {
+    return player.getHand();
   }
 }

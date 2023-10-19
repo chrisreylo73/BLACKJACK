@@ -21,6 +21,10 @@ public class Card {
     }
   }
 
+  public String getImagePath() {
+    return "./cards/" + toString() + ".png";
+  }
+
   public String toString() {
     return value + "-" + suit;
   }
