@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class Gui {
 
-  private int boardWidth = 1000;
+  private int boardWidth = 1130;
   private int boardHeight = 600;
   JFrame frame;
   JPanel gamePanel;
@@ -29,11 +29,11 @@ public class Gui {
         @Override
         public void paintComponent(Graphics g) {
           super.paintComponent(g);
-
           try {
             //Dealer Hand
             ArrayList<Card> dealersHand = game.getDealer().getHand();
             for (int i = 1; i < dealersHand.size(); i++) {
+              Card card = dealersHand.get(i);
               if (stayButton.isEnabled()) {
                 Image hiddenCardImage = new ImageIcon(
                   getClass().getResource("./cards/BACK.png")
@@ -41,7 +41,23 @@ public class Gui {
                   .getImage();
                 g.drawImage(
                   hiddenCardImage,
+                  (boardWidth / 2) - (cardWidth * dealersHand.size() / 2),
                   20,
+                  cardWidth,
+                  cardHeight,
+                  null
+                );
+                Image cardImg = new ImageIcon(
+                  getClass().getResource(card.getImagePath())
+                )
+                  .getImage();
+
+                g.drawImage(
+                  cardImg,
+                  (boardWidth / 2) -
+                  (cardWidth * dealersHand.size() / 2) +
+                  (cardWidth + 5) *
+                  i,
                   20,
                   cardWidth,
                   cardHeight,
@@ -52,30 +68,32 @@ public class Gui {
                   getClass().getResource(dealersHand.get(0).getImagePath())
                 )
                   .getImage();
-
                 g.drawImage(
                   hiddenCardImage,
+                  (boardWidth / 2) - (cardWidth * dealersHand.size() / 2),
                   20,
+                  cardWidth,
+                  cardHeight,
+                  null
+                );
+
+                Image cardImg = new ImageIcon(
+                  getClass().getResource(card.getImagePath())
+                )
+                  .getImage();
+
+                g.drawImage(
+                  cardImg,
+                  (boardWidth / 2) -
+                  (cardWidth * dealersHand.size() / 2) +
+                  (cardWidth + 5) *
+                  i,
                   20,
                   cardWidth,
                   cardHeight,
                   null
                 );
               }
-              Card card = dealersHand.get(i);
-              Image cardImg = new ImageIcon(
-                getClass().getResource(card.getImagePath())
-              )
-                .getImage();
-
-              g.drawImage(
-                cardImg,
-                20 + (cardWidth + 5) * i,
-                20,
-                cardWidth,
-                cardHeight,
-                null
-              );
             }
 
             //Players Hand
@@ -88,7 +106,10 @@ public class Gui {
                 .getImage();
               g.drawImage(
                 cardImg,
-                20 + (cardWidth + 5) * i,
+                (boardWidth / 2) -
+                (cardWidth * playersHand.size() / 2) +
+                (cardWidth + 5) *
+                i,
                 320,
                 cardWidth,
                 cardHeight,
