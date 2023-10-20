@@ -11,7 +11,7 @@ public class BlackJack {
     start();
   }
 
-  public void initDeal() {
+  public void initialDeal() {
     deck = new Deck();
     dealer = new Dealer();
     player = new Player();
@@ -74,7 +74,7 @@ public class BlackJack {
   }
 
   public void start() {
-    initDeal();
+    initialDeal();
     if (dealer.getHandValue() == 21) {
       System.out.println("DEALER WINS!");
     } else if (player.getHandValue() == 21) {
@@ -82,9 +82,15 @@ public class BlackJack {
     }
   }
 
-  // public Deck getDeck() {
-  //   return deck;
-  // }
+  public boolean outcome() {
+    if (
+      dealer.getHandValue() <= 21 &&
+      dealer.getHandValue() > player.getHandValue()
+    ) {
+      return false;
+    }
+    return true;
+  }
 
   public Player getDealer() {
     return dealer;
