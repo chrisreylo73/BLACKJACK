@@ -35,19 +35,27 @@ public class BlackJack {
       "    HIDDEN CARD: " +
       dealer.getHiddenCard()
     );
+    if (player.getHandValue() > 21) {
+      System.out.println("DEALER WINS!");
+    } else if (player.getHandValue() == 21) {
+      System.out.println("PLAYER WINS!");
+    }
   }
 
   public boolean handleHit() {
     Card card = deck.getCardFromDeck();
     player.addToHand(card);
-    if (player.getHandValue() >= 21) {
+    if (player.getHandValue() > 21) {
+      System.out.println("DEALER WINS!");
       return false;
+    } else if (player.getHandValue() == 21) {
+      System.out.println("PLAYER WINS!");
     }
     return true;
   }
 
   public void handleStay() {
-    while (dealer.getHandValue() < 21 && dealer.getHandValue() > 17) {
+    while (dealer.getHandValue() <= 17) {
       Card card = deck.getCardFromDeck();
       dealer.addToHand(card);
     }
@@ -70,9 +78,9 @@ public class BlackJack {
     }
   }
 
-  public Deck getDeck() {
-    return deck;
-  }
+  // public Deck getDeck() {
+  //   return deck;
+  // }
 
   public Player getDealer() {
     return dealer;

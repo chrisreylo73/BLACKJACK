@@ -31,18 +31,37 @@ public class Gui {
           super.paintComponent(g);
 
           try {
-            //Draw Hidden Card
-
-            Image hiddenCardImage = new ImageIcon(
-              getClass().getResource("./cards/BACK.png")
-            )
-              .getImage();
-
-            g.drawImage(hiddenCardImage, 20, 20, cardWidth, cardHeight, null);
-
             //Dealer Hand
             ArrayList<Card> dealersHand = game.getDealer().getHand();
-            for (int i = 0; i < dealersHand.size(); i++) {
+            for (int i = 1; i < dealersHand.size(); i++) {
+              if (stayButton.isEnabled()) {
+                Image hiddenCardImage = new ImageIcon(
+                  getClass().getResource("./cards/BACK.png")
+                )
+                  .getImage();
+                g.drawImage(
+                  hiddenCardImage,
+                  20,
+                  20,
+                  cardWidth,
+                  cardHeight,
+                  null
+                );
+              } else {
+                Image hiddenCardImage = new ImageIcon(
+                  getClass().getResource(dealersHand.get(0).getImagePath())
+                )
+                  .getImage();
+
+                g.drawImage(
+                  hiddenCardImage,
+                  20,
+                  20,
+                  cardWidth,
+                  cardHeight,
+                  null
+                );
+              }
               Card card = dealersHand.get(i);
               Image cardImg = new ImageIcon(
                 getClass().getResource(card.getImagePath())
@@ -51,7 +70,7 @@ public class Gui {
 
               g.drawImage(
                 cardImg,
-                cardWidth + 25 + (cardWidth + 5) * i,
+                20 + (cardWidth + 5) * i,
                 20,
                 cardWidth,
                 cardHeight,
@@ -107,7 +126,6 @@ public class Gui {
         public void actionPerformed(ActionEvent e) {
           hitButton.setEnabled(false);
           stayButton.setEnabled(false);
-          //
           game.handleStay();
           gamePanel.repaint();
         }
