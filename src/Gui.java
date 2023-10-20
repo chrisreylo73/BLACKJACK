@@ -12,6 +12,7 @@ public class Gui {
   JPanel buttonsPanel;
   JButton hitButton;
   JButton stayButton;
+  JButton playAgainButton;
   int cardWidth = 110;
   int cardHeight = 154;
   BlackJack game;
@@ -127,10 +128,14 @@ public class Gui {
     buttonsPanel = new JPanel();
     hitButton = new JButton("HIT");
     stayButton = new JButton("STAY");
+    playAgainButton = new JButton("PLAY AGAIN?");
+    playAgainButton.setVisible(false);
     hitButton.setFocusable(false);
     stayButton.setFocusable(false);
+    playAgainButton.setFocusable(false);
     buttonsPanel.add(hitButton);
     buttonsPanel.add(stayButton);
+    buttonsPanel.add(playAgainButton);
     frame.add(buttonsPanel, BorderLayout.SOUTH);
 
     hitButton.addActionListener(
@@ -148,6 +153,18 @@ public class Gui {
           hitButton.setEnabled(false);
           stayButton.setEnabled(false);
           game.handleStay();
+          gamePanel.repaint();
+          playAgainButton.setVisible(true);
+        }
+      }
+    );
+
+    playAgainButton.addActionListener(
+      new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          game.handlePlayAgain();
+          hitButton.setEnabled(true);
+          stayButton.setEnabled(true);
           gamePanel.repaint();
         }
       }

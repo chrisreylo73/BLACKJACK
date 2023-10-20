@@ -7,14 +7,14 @@ public class BlackJack {
 
   public BlackJack() {
     // Initialize the game components
-    deck = new Deck();
-    dealer = new Dealer();
-    player = new Player();
     gui = new Gui(this);
     start();
   }
 
   public void initDeal() {
+    deck = new Deck();
+    dealer = new Dealer();
+    player = new Player();
     player.addToHand(deck.getCardFromDeck());
     player.addToHand(deck.getCardFromDeck());
     System.out.println(
@@ -67,6 +67,10 @@ public class BlackJack {
     } else {
       System.out.println("PLAYER WINS!");
     }
+  }
+
+  public void handlePlayAgain() {
+    start();
   }
 
   public void start() {
