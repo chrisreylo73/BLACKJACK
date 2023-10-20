@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class Gui {
 
-  private int boardWidth = 600;
+  private int boardWidth = 1000;
   private int boardHeight = 600;
   JFrame frame;
   JPanel gamePanel;
@@ -41,7 +41,7 @@ public class Gui {
             g.drawImage(hiddenCardImage, 20, 20, cardWidth, cardHeight, null);
 
             //Dealer Hand
-            ArrayList<Card> dealersHand = game.getDealerHand();
+            ArrayList<Card> dealersHand = game.getDealer().getHand();
             for (int i = 0; i < dealersHand.size(); i++) {
               Card card = dealersHand.get(i);
               Image cardImg = new ImageIcon(
@@ -60,7 +60,7 @@ public class Gui {
             }
 
             //Players Hand
-            ArrayList<Card> playersHand = game.getPlayersHand();
+            ArrayList<Card> playersHand = game.getPlayer().getHand();
             for (int i = 0; i < playersHand.size(); i++) {
               Card card = playersHand.get(i);
               Image cardImg = new ImageIcon(
@@ -96,9 +96,26 @@ public class Gui {
     hitButton.addActionListener(
       new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-          Card card = game.getCardFromDeck();
-
+          Card card = game.getDeck().getCardFromDeck();
+          game.getPlayer().addToHand(card);
+          if (game.getPlayer().getHandValue() >= 21) {
+            hitButton.setEnabled(false);
+          }
           gamePanel.repaint();
+        }
+      }
+    );
+
+    stayButton.addActionListener(
+      new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          hitButton.setEnabled(false);
+          stayButton.setEnabled(false);
+          while (game.getDealer().getHandValue() <= 21) {
+            Card card = game.getDeck().getCardFromDeck();
+            game.getDealer().addToHand(card);
+            gamePanel.repaint();
+          }
         }
       }
     );

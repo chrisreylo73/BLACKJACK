@@ -50,19 +50,31 @@ public class BlackJack {
     initDeal();
   }
 
-  public Card getCardFromDeck() {
-    return deck.getCardFromDeck();
+  // public Card getCardFromDeck() {
+  //   return deck.getCardFromDeck();
+  // }
+
+  // public ArrayList<Card> getPlayersHand() {
+  //   return player.getHand();
+  // }
+
+  // public void addCardToPlayerHand(Card card) {
+  //   player.addToHand(card);
+  // }
+
+  // public ArrayList<Card> getDealerHand() {
+  //   return dealer.getHand();
+  // }
+
+  public Deck getDeck() {
+    return deck;
   }
 
-  public ArrayList<Card> getPlayersHand() {
-    return player.getHand();
+  public Player getDealer() {
+    return dealer;
   }
 
-  public void addCardToPlayerHand(Card card) {
-    player.addToHand(card);
-  }
-
-  public ArrayList<Card> getDealerHand() {
-    return dealer.getHand();
+  public Player getPlayer() {
+    return player;
   }
 }
