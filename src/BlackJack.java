@@ -1,8 +1,3 @@
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
-import javax.swing.*;
-
 public class BlackJack {
 
   Player player;
@@ -42,29 +37,38 @@ public class BlackJack {
     );
   }
 
-  public void handleHit() {}
+  public boolean handleHit() {
+    Card card = deck.getCardFromDeck();
+    player.addToHand(card);
+    if (player.getHandValue() >= 21) {
+      return false;
+    }
+    return true;
+  }
 
-  public void handleStay() {}
+  public void handleStay() {
+    while (dealer.getHandValue() < 21 && dealer.getHandValue() > 17) {
+      Card card = deck.getCardFromDeck();
+      dealer.addToHand(card);
+    }
+    if (
+      dealer.getHandValue() <= 21 &&
+      dealer.getHandValue() > player.getHandValue()
+    ) {
+      System.out.println("DEALER WINS!");
+    } else {
+      System.out.println("PLAYER WINS!");
+    }
+  }
 
   public void start() {
     initDeal();
+    if (dealer.getHandValue() == 21) {
+      System.out.println("DEALER WINS!");
+    } else if (player.getHandValue() == 21) {
+      System.out.println("PLAYER WINS!");
+    }
   }
-
-  // public Card getCardFromDeck() {
-  //   return deck.getCardFromDeck();
-  // }
-
-  // public ArrayList<Card> getPlayersHand() {
-  //   return player.getHand();
-  // }
-
-  // public void addCardToPlayerHand(Card card) {
-  //   player.addToHand(card);
-  // }
-
-  // public ArrayList<Card> getDealerHand() {
-  //   return dealer.getHand();
-  // }
 
   public Deck getDeck() {
     return deck;

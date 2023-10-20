@@ -96,11 +96,7 @@ public class Gui {
     hitButton.addActionListener(
       new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-          Card card = game.getDeck().getCardFromDeck();
-          game.getPlayer().addToHand(card);
-          if (game.getPlayer().getHandValue() >= 21) {
-            hitButton.setEnabled(false);
-          }
+          hitButton.setEnabled(game.handleHit());
           gamePanel.repaint();
         }
       }
@@ -111,11 +107,9 @@ public class Gui {
         public void actionPerformed(ActionEvent e) {
           hitButton.setEnabled(false);
           stayButton.setEnabled(false);
-          while (game.getDealer().getHandValue() <= 21) {
-            Card card = game.getDeck().getCardFromDeck();
-            game.getDealer().addToHand(card);
-            gamePanel.repaint();
-          }
+          //
+          game.handleStay();
+          gamePanel.repaint();
         }
       }
     );
