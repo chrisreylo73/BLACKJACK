@@ -1,5 +1,6 @@
 public class Dealer extends Player {
 
+  // Declare a private instance variable for the hidden card
   private Card hiddenCard;
 
   @Override
@@ -11,13 +12,17 @@ public class Dealer extends Player {
 
     // Update handValue
     handValue += card.getValue();
-    // Reduce Ace if needed
+
+    // Reduce Ace if needed to avoid busting
     while (handValue > 21 && aceCounter > 0) {
       handValue -= 10;
       aceCounter--;
     }
-    //Add card to hand
+
+    // Add the received card to the dealer's hand
     hand.add(card);
+
+    // Display the dealer's hand value and additional information
     System.out.println("\n____________DEALER____________");
     System.out.println("HAND: " + getHand() + "   VALUE: " + getHandValue());
     System.out.println(
@@ -33,6 +38,7 @@ public class Dealer extends Player {
   }
 
   public void setHiddenCard(Card card) {
+    // Set the hidden card for the dealer
     hiddenCard = card;
   }
 }

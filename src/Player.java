@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Player {
 
+  // Member variables to track the player's hand, hand value, and ace count
   protected ArrayList<Card> hand;
   protected int handValue;
   protected int aceCounter;
@@ -19,15 +20,19 @@ public class Player {
       aceCounter++;
     }
 
-    // Update handValue
+    // Update handValue with the value of the new card
     handValue += card.getValue();
-    // Reduce Ace if needed
+
+    // Reduce Ace value from the handValue if needed
     while (handValue > 21 && aceCounter > 0) {
       handValue -= 10;
       aceCounter--;
     }
-    //Add card to hand
+
+    // Add the card to the hand
     hand.add(card);
+
+    // Display player's hand and value
     System.out.println("\n____________PLAYER____________");
     System.out.println("HAND: " + getHand() + "   VALUE: " + getHandValue());
     System.out.println("   ACE COUNTER: " + getAceCounter());

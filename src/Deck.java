@@ -3,11 +3,13 @@ import java.util.Random;
 
 public class Deck {
 
+  // Member variable to store the deck of cards
   ArrayList<Card> deck;
+  // Random number generator for shuffling
   private Random random = new Random();
 
   public Deck() {
-    // Initialize the deck with 52 deck
+    // Initialize the deck with 52 cards and shuffle it
     buildDeck();
     shuffle();
   }
@@ -30,18 +32,22 @@ public class Deck {
       "K",
     };
     String[] suits = { "C", "D", "H", "S" };
+
+    // Create cards for each combination of value and suit
     for (int i = 0; i < suits.length; i++) {
       for (int j = 0; j < values.length; j++) {
         Card card = new Card(values[j], suits[i]);
         deck.add(card);
       }
     }
+
+    // Display the initial deck
     System.out.println("BUILD DECK: ");
     System.out.println(deck);
   }
 
   public void shuffle() {
-    // Shuffle the deck
+    // Shuffle the deck by swapping cards randomly
     for (int i = 0; i < deck.size(); i++) {
       int j = random.nextInt(deck.size());
       Card currentCard = deck.get(i);
@@ -50,13 +56,14 @@ public class Deck {
       deck.set(j, currentCard);
     }
 
+    // Display the shuffled deck
     System.out.println("SHUFFLED:");
     System.out.println(deck);
   }
 
   public Card drawCard() {
-    // Draw a card from the deck
-    if (deck.size() > 1) {
+    // Draw a card from the deck, and rebuild and shuffle the deck if only one card remains
+    if (deck.size() <= 1) {
       buildDeck();
       shuffle();
     }
@@ -69,6 +76,7 @@ public class Deck {
   }
 
   public Card getCardFromDeck() {
+    // Remove and return the top card from the deck
     return deck.remove(deck.size() - 1);
   }
 }
