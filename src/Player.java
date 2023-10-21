@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Player {
 
-  private ArrayList<Card> hand;
-  private int handValue;
-  private int aceCounter;
+  protected ArrayList<Card> hand;
+  protected int handValue;
+  protected int aceCounter;
 
   public Player() {
     // Initialize an empty hand and score
@@ -28,6 +28,9 @@ public class Player {
     }
     //Add card to hand
     hand.add(card);
+    System.out.println("\n____________PLAYER____________");
+    System.out.println("HAND: " + getHand() + "   VALUE: " + getHandValue());
+    System.out.println("   ACE COUNTER: " + getAceCounter());
   }
 
   public int getAceCounter() {

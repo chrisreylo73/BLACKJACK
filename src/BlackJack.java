@@ -17,55 +17,45 @@ public class BlackJack {
     player = new Player();
     player.addToHand(deck.getCardFromDeck());
     player.addToHand(deck.getCardFromDeck());
-    System.out.println(
-      "PLAYER HAND: " + player.getHand() + "   VALUE: " + player.getHandValue()
-    );
-    System.out.println("   ACE COUNTER: " + dealer.getAceCounter());
 
     Card hiddenCard = deck.getCardFromDeck();
     dealer.setHiddenCard(hiddenCard);
     dealer.addToHand(hiddenCard);
     dealer.addToHand(deck.getCardFromDeck());
-    System.out.println(
-      "DEALER HAND: " + dealer.getHand() + "   VALUE: " + dealer.getHandValue()
-    );
-    System.out.println(
-      "   ACE COUNTER: " +
-      dealer.getAceCounter() +
-      "    HIDDEN CARD: " +
-      dealer.getHiddenCard()
-    );
-    if (player.getHandValue() > 21) {
-      System.out.println("DEALER WINS!");
-    } else if (player.getHandValue() == 21) {
-      System.out.println("PLAYER WINS!");
+    if (player.getHandValue() == 21) {
+      gui.handleStay();
     }
   }
 
   public boolean handleHit() {
     Card card = deck.getCardFromDeck();
     player.addToHand(card);
-    if (player.getHandValue() > 21) {
-      System.out.println("DEALER WINS!");
+    if (player.getHandValue() == 21) {
+      //PLAYER WINS!
+      return true;
+    } else if (player.getHandValue() > 21) {
+      //DEALER WINS
       return false;
-    } else if (player.getHandValue() == 21) {
-      System.out.println("PLAYER WINS!");
     }
     return true;
   }
 
-  public void handleStay() {
-    while (dealer.getHandValue() <= 17) {
+  public boolean handleStay() {
+    while (dealer.getHandValue() <= 16) {
       Card card = deck.getCardFromDeck();
       dealer.addToHand(card);
     }
-    if (
+    if (player.getHandValue() == 21) {
+      return true;
+    } else if (
       dealer.getHandValue() <= 21 &&
       dealer.getHandValue() > player.getHandValue()
     ) {
-      System.out.println("DEALER WINS!");
+      // DEALER WINS
+      return false;
     } else {
-      System.out.println("PLAYER WINS!");
+      // PLAYER WINS
+      return true;
     }
   }
 
@@ -75,11 +65,6 @@ public class BlackJack {
 
   public void start() {
     initialDeal();
-    if (dealer.getHandValue() == 21) {
-      System.out.println("DEALER WINS!");
-    } else if (player.getHandValue() == 21) {
-      System.out.println("PLAYER WINS!");
-    }
   }
 
   public boolean outcome() {
