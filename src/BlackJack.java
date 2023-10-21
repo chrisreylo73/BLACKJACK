@@ -48,6 +48,7 @@ public class BlackJack {
       // Player wins with a blackjack (21)
       return true;
     } else if (player.getHandValue() > 21) {
+      gui.handleStay();
       // Dealer wins if player's hand value exceeds 21
       return false;
     }
@@ -65,6 +66,8 @@ public class BlackJack {
     if (player.getHandValue() == 21) {
       // Player wins with a blackjack (21)
       return true;
+    } else if (player.getHandValue() > 21) {
+      return false;
     } else if (
       dealer.getHandValue() <= 21 &&
       dealer.getHandValue() > player.getHandValue()
