@@ -35,16 +35,4 @@ public class Dealer extends Player {
   public void setHiddenCard(Card card) {
     hiddenCard = card;
   }
-
-  public void revealHiddenCard() {
-    addToHand(hiddenCard);
-    hiddenCard = null;
-  }
-
-  public boolean shouldDrawCard() {
-    if (getHandValue() < 17) {
-      return true;
-    }
-    return false;
-  }
 }
