@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="DeckTests" time="0.132" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\chris\Desktop\BLACK JACK\blackjack\target\test-classes;C:\Users\chris\Desktop\BLACK JACK\blackjack\target\classes;C:\Users\chris\.m2\repository\junit\junit\4.8.1\junit-4.8.1.jar;"/>
+    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Denver"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\chris\AppData\Local\Temp\surefire11307155421265694592\surefirebooter-20231022105929050_3.jar C:\Users\chris\AppData\Local\Temp\surefire11307155421265694592 2023-10-22T10-59-28_767-jvmRun1 surefire-20231022105929050_1tmp surefire_0-20231022105929050_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\chris\Desktop\BLACK JACK\blackjack\target\test-classes;C:\Users\chris\Desktop\BLACK JACK\blackjack\target\classes;C:\Users\chris\.m2\repository\junit\junit\4.8.1\junit-4.8.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\chris"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-01-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\chris\Desktop\BLACK JACK\blackjack"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\chris\AppData\Local\Temp\surefire11307155421265694592\surefirebooter-20231022105929050_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.2+8-LTS-86"/>
+    <property name="user.name" value="chris"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\chris\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\chris\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.2"/>
+    <property name="user.dir" value="C:\Users\chris\Desktop\BLACK JACK\blackjack"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PostgreSQL\14\bin;C:\Apache Bench\Apache24\bin;C:\kotlinc\bin;C:\Users\chris\AppData\Local\Programs\mongosh\;C:\Program Files\mongodb-database-tools-windows-x86_64-100.5.2\bin;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Steel Bank Common Lisp\;C:\Program Files (x86)\;C:\Program Files\Git\cmd;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\apache-maven-3.9.3\bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Users\chris\.pyenv\pyenv-win\bin;C:\Users\chris\.pyenv\pyenv-win\shims;C:\Users\chris\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\chris\AppData\Local\Programs\Python\Python310\;C:\Users\chris\AppData\Local\Microsoft\WindowsApps;C:\Users\chris\AppData\Local\Programs\Microsoft VS Code\bin;C:\sqlite;C:\Program Files\PostgreSQL\14\bin;;C:\Users\chris\AppData\Local\Coursier\data\bin;C:\Users\chris\AppData\Local\Programs\mongosh\;C:\Users\chris\AppData\Local\Microsoft\WindowsApps;C:\Users\chris\AppData\Roaming\npm;C:\Users\chris\.dotnet\tools;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.2+8-LTS-86"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testGetCardFromDeck" classname="DeckTests" time="0.005">
+    <system-out><![CDATA[BUILD DECK: 
+[A-C, 2-C, 3-C, 4-C, 5-C, 6-C, 7-C, 8-C, 9-C, 10-C, J-C, Q-C, K-C, A-D, 2-D, 3-D, 4-D, 5-D, 6-D, 7-D, 8-D, 9-D, 10-D, J-D, Q-D, K-D, A-H, 2-H, 3-H, 4-H, 5-H, 6-H, 7-H, 8-H, 9-H, 10-H, J-H, Q-H, K-H, A-S, 2-S, 3-S, 4-S, 5-S, 6-S, 7-S, 8-S, 9-S, 10-S, J-S, Q-S, K-S]
+SHUFFLED:
+[5-H, 6-H, K-C, Q-S, 2-D, 4-D, A-D, Q-C, 6-D, J-S, 5-C, 8-S, A-S, 6-S, 2-H, 9-H, 2-S, 9-D, 5-D, 8-H, J-D, 10-C, 3-S, Q-H, 2-C, 10-D, 8-D, 8-C, 7-C, 9-S, 10-H, 7-D, 3-D, 3-H, 4-S, J-C, K-S, 6-C, 7-S, A-H, 3-C, J-H, A-C, 5-S, Q-D, 4-H, 10-S, K-H, K-D, 9-C, 7-H, 4-C]
+]]></system-out>
+  </testcase>
+  <testcase name="testBuildDeck" classname="DeckTests" time="0.103">
+    <system-out><![CDATA[BUILD DECK: 
+[A-C, 2-C, 3-C, 4-C, 5-C, 6-C, 7-C, 8-C, 9-C, 10-C, J-C, Q-C, K-C, A-D, 2-D, 3-D, 4-D, 5-D, 6-D, 7-D, 8-D, 9-D, 10-D, J-D, Q-D, K-D, A-H, 2-H, 3-H, 4-H, 5-H, 6-H, 7-H, 8-H, 9-H, 10-H, J-H, Q-H, K-H, A-S, 2-S, 3-S, 4-S, 5-S, 6-S, 7-S, 8-S, 9-S, 10-S, J-S, Q-S, K-S]
+SHUFFLED:
+[4-D, 6-H, 10-C, A-S, 9-D, K-H, 5-D, 8-D, 4-C, 8-H, 2-S, 7-C, K-D, 7-S, 9-C, Q-S, 6-C, J-H, 9-S, 8-C, Q-D, 2-C, A-D, 10-S, 5-C, J-D, 5-H, 5-S, J-C, Q-C, 7-H, 2-H, 4-H, 3-D, 4-S, 10-H, 9-H, 6-S, 6-D, 3-S, K-C, A-C, J-S, K-S, 3-C, Q-H, 2-D, A-H, 10-D, 8-S, 3-H, 7-D]
+BUILD DECK: 
+[A-C, 2-C, 3-C, 4-C, 5-C, 6-C, 7-C, 8-C, 9-C, 10-C, J-C, Q-C, K-C, A-D, 2-D, 3-D, 4-D, 5-D, 6-D, 7-D, 8-D, 9-D, 10-D, J-D, Q-D, K-D, A-H, 2-H, 3-H, 4-H, 5-H, 6-H, 7-H, 8-H, 9-H, 10-H, J-H, Q-H, K-H, A-S, 2-S, 3-S, 4-S, 5-S, 6-S, 7-S, 8-S, 9-S, 10-S, J-S, Q-S, K-S]
+SHUFFLED:
+[6-C, A-C, 7-S, 10-D, 5-H, 7-H, 6-H, 4-H, 4-D, K-H, 7-C, Q-D, 8-D, 7-D, 3-C, 10-S, 3-H, J-H, 9-C, 2-D, 4-C, 5-C, Q-S, 2-C, J-D, 6-S, K-S, 9-H, 3-S, 5-D, J-C, 2-S, A-H, Q-C, K-C, 8-S, A-D, 6-D, K-D, 9-D, 8-H, 3-D, 10-H, 4-S, 5-S, 10-C, 9-S, A-S, 2-H, 8-C, Q-H, J-S]
+DECK CARD: 6-C
+TARGET Card: 10-C
+52
+DECK CARD: A-C
+TARGET Card: 10-C
+52
+DECK CARD: 7-S
+TARGET Card: 10-C
+52
+DECK CARD: 10-D
+TARGET Card: 10-C
+52
+DECK CARD: 5-H
+TARGET Card: 10-C
+52
+DECK CARD: 7-H
+TARGET Card: 10-C
+52
+DECK CARD: 6-H
+TARGET Card: 10-C
+52
+DECK CARD: 4-H
+TARGET Card: 10-C
+52
+DECK CARD: 4-D
+TARGET Card: 10-C
+52
+DECK CARD: K-H
+TARGET Card: 10-C
+52
+DECK CARD: 7-C
+TARGET Card: 10-C
+52
+DECK CARD: Q-D
+TARGET Card: 10-C
+52
+DECK CARD: 8-D
+TARGET Card: 10-C
+52
+DECK CARD: 7-D
+TARGET Card: 10-C
+52
+DECK CARD: 3-C
+TARGET Card: 10-C
+52
+DECK CARD: 10-S
+TARGET Card: 10-C
+52
+DECK CARD: 3-H
+TARGET Card: 10-C
+52
+DECK CARD: J-H
+TARGET Card: 10-C
+52
+DECK CARD: 9-C
+TARGET Card: 10-C
+52
+DECK CARD: 2-D
+TARGET Card: 10-C
+52
+DECK CARD: 4-C
+TARGET Card: 10-C
+52
+DECK CARD: 5-C
+TARGET Card: 10-C
+52
+DECK CARD: Q-S
+TARGET Card: 10-C
+52
+DECK CARD: 2-C
+TARGET Card: 10-C
+52
+DECK CARD: J-D
+TARGET Card: 10-C
+52
+DECK CARD: 6-S
+TARGET Card: 10-C
+52
+DECK CARD: K-S
+TARGET Card: 10-C
+52
+DECK CARD: 9-H
+TARGET Card: 10-C
+52
+DECK CARD: 3-S
+TARGET Card: 10-C
+52
+DECK CARD: 5-D
+TARGET Card: 10-C
+52
+DECK CARD: J-C
+TARGET Card: 10-C
+52
+DECK CARD: 2-S
+TARGET Card: 10-C
+52
+DECK CARD: A-H
+TARGET Card: 10-C
+52
+DECK CARD: Q-C
+TARGET Card: 10-C
+52
+DECK CARD: K-C
+TARGET Card: 10-C
+52
+DECK CARD: 8-S
+TARGET Card: 10-C
+52
+DECK CARD: A-D
+TARGET Card: 10-C
+52
+DECK CARD: 6-D
+TARGET Card: 10-C
+52
+DECK CARD: K-D
+TARGET Card: 10-C
+52
+DECK CARD: 9-D
+TARGET Card: 10-C
+52
+DECK CARD: 8-H
+TARGET Card: 10-C
+52
+DECK CARD: 3-D
+TARGET Card: 10-C
+52
+DECK CARD: 10-H
+TARGET Card: 10-C
+52
+DECK CARD: 4-S
+TARGET Card: 10-C
+52
+DECK CARD: 5-S
+TARGET Card: 10-C
+52
+DECK CARD: 10-C
+TARGET Card: 10-C
+52
+DECK CARD: 6-C
+TARGET Card: A-H
+52
+DECK CARD: A-C
+TARGET Card: A-H
+52
+DECK CARD: 7-S
+TARGET Card: A-H
+52
+DECK CARD: 10-D
+TARGET Card: A-H
+52
+DECK CARD: 5-H
+TARGET Card: A-H
+52
+DECK CARD: 7-H
+TARGET Card: A-H
+52
+DECK CARD: 6-H
+TARGET Card: A-H
+52
+DECK CARD: 4-H
+TARGET Card: A-H
+52
+DECK CARD: 4-D
+TARGET Card: A-H
+52
+DECK CARD: K-H
+TARGET Card: A-H
+52
+DECK CARD: 7-C
+TARGET Card: A-H
+52
+DECK CARD: Q-D
+TARGET Card: A-H
+52
+DECK CARD: 8-D
+TARGET Card: A-H
+52
+DECK CARD: 7-D
+TARGET Card: A-H
+52
+DECK CARD: 3-C
+TARGET Card: A-H
+52
+DECK CARD: 10-S
+TARGET Card: A-H
+52
+DECK CARD: 3-H
+TARGET Card: A-H
+52
+DECK CARD: J-H
+TARGET Card: A-H
+52
+DECK CARD: 9-C
+TARGET Card: A-H
+52
+DECK CARD: 2-D
+TARGET Card: A-H
+52
+DECK CARD: 4-C
+TARGET Card: A-H
+52
+DECK CARD: 5-C
+TARGET Card: A-H
+52
+DECK CARD: Q-S
+TARGET Card: A-H
+52
+DECK CARD: 2-C
+TARGET Card: A-H
+52
+DECK CARD: J-D
+TARGET Card: A-H
+52
+DECK CARD: 6-S
+TARGET Card: A-H
+52
+DECK CARD: K-S
+TARGET Card: A-H
+52
+DECK CARD: 9-H
+TARGET Card: A-H
+52
+DECK CARD: 3-S
+TARGET Card: A-H
+52
+DECK CARD: 5-D
+TARGET Card: A-H
+52
+DECK CARD: J-C
+TARGET Card: A-H
+52
+DECK CARD: 2-S
+TARGET Card: A-H
+52
+DECK CARD: A-H
+TARGET Card: A-H
+52
+]]></system-out>
+  </testcase>
+  <testcase name="testShuffle" classname="DeckTests" time="0.012">
+    <system-out><![CDATA[BUILD DECK: 
+[A-C, 2-C, 3-C, 4-C, 5-C, 6-C, 7-C, 8-C, 9-C, 10-C, J-C, Q-C, K-C, A-D, 2-D, 3-D, 4-D, 5-D, 6-D, 7-D, 8-D, 9-D, 10-D, J-D, Q-D, K-D, A-H, 2-H, 3-H, 4-H, 5-H, 6-H, 7-H, 8-H, 9-H, 10-H, J-H, Q-H, K-H, A-S, 2-S, 3-S, 4-S, 5-S, 6-S, 7-S, 8-S, 9-S, 10-S, J-S, Q-S, K-S]
+SHUFFLED:
+[4-H, 6-C, J-H, 4-C, 10-H, 8-H, 10-D, 5-D, 10-S, 9-D, 8-S, K-C, 6-D, 8-D, 8-C, 7-C, 10-C, J-C, A-D, Q-C, 2-H, 3-H, J-S, K-D, A-C, 5-H, K-H, 9-H, 3-S, Q-H, 7-S, A-S, J-D, 5-S, 7-H, 9-C, K-S, 4-S, Q-D, 2-D, 2-C, 9-S, 5-C, 6-H, 2-S, A-H, 4-D, 3-D, 6-S, Q-S, 7-D, 3-C]
+BUILD DECK: 
+[A-C, 2-C, 3-C, 4-C, 5-C, 6-C, 7-C, 8-C, 9-C, 10-C, J-C, Q-C, K-C, A-D, 2-D, 3-D, 4-D, 5-D, 6-D, 7-D, 8-D, 9-D, 10-D, J-D, Q-D, K-D, A-H, 2-H, 3-H, 4-H, 5-H, 6-H, 7-H, 8-H, 9-H, 10-H, J-H, Q-H, K-H, A-S, 2-S, 3-S, 4-S, 5-S, 6-S, 7-S, 8-S, 9-S, 10-S, J-S, Q-S, K-S]
+SHUFFLED:
+[9-D, 5-H, 8-D, 7-H, 8-C, 4-D, J-C, 10-S, A-D, 5-S, J-D, Q-C, 6-C, 8-S, 2-S, 3-D, 10-D, 9-S, 4-H, K-H, 8-H, 2-D, 4-S, 10-H, 7-D, A-S, 10-C, 3-S, 5-D, 2-H, A-C, Q-S, 6-H, A-H, 3-H, K-D, Q-H, 5-C, K-S, 9-C, 6-S, 9-H, 3-C, K-C, 4-C, 7-C, J-S, Q-D, 7-S, 6-D, 2-C, J-H]
+BUILD DECK: 
+[A-C, 2-C, 3-C, 4-C, 5-C, 6-C, 7-C, 8-C, 9-C, 10-C, J-C, Q-C, K-C, A-D, 2-D, 3-D, 4-D, 5-D, 6-D, 7-D, 8-D, 9-D, 10-D, J-D, Q-D, K-D, A-H, 2-H, 3-H, 4-H, 5-H, 6-H, 7-H, 8-H, 9-H, 10-H, J-H, Q-H, K-H, A-S, 2-S, 3-S, 4-S, 5-S, 6-S, 7-S, 8-S, 9-S, 10-S, J-S, Q-S, K-S]
+SHUFFLED:
+[Q-C, 5-D, 6-H, Q-H, 3-H, 10-C, Q-S, K-C, 4-S, 8-S, J-D, 9-H, K-H, 4-C, 7-D, 6-D, 10-D, 2-S, A-H, 7-S, 2-H, 5-H, J-C, 5-S, 3-S, 4-H, A-D, 7-H, 10-S, 9-D, 6-S, K-S, 3-D, 8-D, 9-C, 2-C, 6-C, 8-H, K-D, 8-C, J-H, J-S, A-C, 10-H, 9-S, Q-D, A-S, 4-D, 3-C, 7-C, 2-D, 5-C]
+SHUFFLED:
+[7-S, 3-H, Q-S, 2-H, 8-D, K-H, Q-D, 9-D, Q-H, J-S, 6-C, A-S, 10-D, 5-H, 4-H, 4-D, 3-S, 6-D, 3-D, 5-D, 4-C, 4-S, 3-C, 8-S, Q-C, A-C, K-D, 9-C, 7-C, 8-H, 7-H, 5-C, 10-S, 6-H, A-D, 8-C, K-C, 2-C, 9-S, J-C, K-S, 2-D, A-H, 9-H, 6-S, 10-C, J-H, 10-H, J-D, 2-S, 5-S, 7-D]
+]]></system-out>
+  </testcase>
+  <testcase name="testDrawCard" classname="DeckTests" time="0.006">
+    <system-out><![CDATA[BUILD DECK: 
+[A-C, 2-C, 3-C, 4-C, 5-C, 6-C, 7-C, 8-C, 9-C, 10-C, J-C, Q-C, K-C, A-D, 2-D, 3-D, 4-D, 5-D, 6-D, 7-D, 8-D, 9-D, 10-D, J-D, Q-D, K-D, A-H, 2-H, 3-H, 4-H, 5-H, 6-H, 7-H, 8-H, 9-H, 10-H, J-H, Q-H, K-H, A-S, 2-S, 3-S, 4-S, 5-S, 6-S, 7-S, 8-S, 9-S, 10-S, J-S, Q-S, K-S]
+SHUFFLED:
+[Q-S, J-S, A-H, 9-C, 7-H, 4-H, 3-D, J-H, 9-D, 5-D, 9-H, Q-D, J-D, K-S, 6-C, 2-H, 6-D, K-D, 10-S, J-C, 8-D, A-D, 5-S, 10-C, 7-D, 4-D, 10-D, 3-S, A-C, 7-C, 5-H, 2-D, 10-H, 9-S, 3-C, 5-C, K-H, 6-S, 8-S, A-S, Q-C, 4-C, 8-C, 6-H, 2-S, Q-H, 4-S, K-C, 7-S, 3-H, 2-C, 8-H]
+]]></system-out>
+  </testcase>
+</testsuite>
