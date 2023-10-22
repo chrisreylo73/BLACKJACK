@@ -52,12 +52,12 @@ public class Deck {
     return deck.size();
   }
 
-  public boolean contains(Card card) {
-    for (Card crd : deck) {
-      System.out.println("DECK CARD: " + crd);
-      System.out.println("TARGET Card: " + card);
+  public boolean contains(Card target) {
+    for (Card card : deck) {
+      System.out.println("DECK CARD: " + card);
+      System.out.println("TARGET Card: " + target);
       System.out.println(deck.size());
-      if (crd.value == card.value && crd.suit == card.suit) {
+      if (card.value == target.value && card.suit == target.suit) {
         return true;
       }
     }
